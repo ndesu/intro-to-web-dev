@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function toggleActive() {
+			// grab an element to change
+			var element = document.getElementById('changeMe');
+			//  check if the element already has the new class - if it does, remove it, if it doesn't add it
+			console.log(element.classList);
+			if (element.classList.contains('active')) {
+				element.classList.remove('active');
+				element.innerHTML = "I'm not active anymore";
+			} else {
+				element.classList.add('active');
+				element.innerHTML = "woohoo! I'm active!"
+			}
+		}
+	</script>
+
+</head>
+<body>
+	<h1 id="changeMe" onclick="toggleActive()">This is a header. Click me to change my CSS and my HTML content. </h1>
+</body>
+</html>

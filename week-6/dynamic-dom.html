@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dynamic DOM 2 ways</title>
+	</head>
+	<body>
+		<p onclick="addSingleP()">Add a single paragraph using strings</p>
+		<button onclick="addMultiP(8)">
+			Add multiple paragraphs the right way using DOM node
+		</button>
+		<div id="content">
+			<p>
+				This is a paragraph with text that will be overwritten the hacky way
+			</p>
+		</div>
+		<script type="text/javascript">
+			// declare out content var globally
+			// this will only happen because the script is after the body counter
+			var content = document.getElementById('content');
+			console.log(content);
+
+			function addSingleP() {
+				content.innerHTML = "<p>This is a poorly instantiated paragraph using String trickery</p>";
+			}
+
+			// proper dynamic DOM
+			function addMultiP(num) {
+				// start loop
+				for(var i = 0; i < num; i++) {
+					console.log(i);
+					var p = document.createElement('P');
+					var text = document.createTextNode("this is paragraph number " + (i + 1));
+					// append text to paragraph
+					p.appendChild(text);
+					// append the p and text child to the content div
+					content.appendChild(p);
+				}
+			}
+		</script>
+	</body>
+</html>

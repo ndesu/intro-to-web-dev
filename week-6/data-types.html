@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Javascript can live here between script tags -->
+	<script type="text/javascript">
+		// declare a variable and convert its data type
+		// var myVar; // declare
+		// myVar = "number" // assign
+		// or we can do it in one line
+		var myVar = "number";
+		console.log(myVar);
+		//console.log(typeOf(myVar));
+
+		//  reassign a number/integer value to myVar
+		myVar = "8";
+		console.log(myVar);
+		//console.log(typeOf(myVar));
+
+		var myVar2 = 2*myVar;
+		console.log(myVar);
+		//console.log(typeOf(myVar));
+
+		// variables and string mixed
+		var temp = 72;
+		console.log("today's temperature is " + temp + " degrees fahrenheit.");
+
+		// sum parameters, onLoad, onClick
+
+		// declare and write our function
+		function sumVals(a, b) {
+			var sum = a + b;
+			alert(sum);
+		}
+
+		// booleans and conditionals
+		var isOn = true;
+		function switchOnOff() {
+			if(isOn === true) {
+				alert("isOn is currently true, now switching it to false");
+				isOn = false;
+			} else {
+				alert("isOn is currently false, now switching it to true");
+				isOn = true;
+			}
+		}
+
+		// loops and increments
+		function countToN(n) {
+			for (var i=0; i < n; i+=2) {
+				console.log(i);
+			}
+		}
+	</script>
+</head>
+<body>
+	<button onclick="sumVals(67, 123452)">Sum Values</button>
+	<button onclick="switchOnOff()">Toggle Me</button>
+	<button onclick="countToN(67)">Count to 67</button>
+</body>
+</html>
