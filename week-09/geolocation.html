@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Geolocation</title>
+	<script type="text/javascript">
+		// use event delegation to make sure the page is loaded
+		document.addEventListener('DOMContentLoaded', getLocation);
+
+		function getLocation() {
+			// conditional statement to check if we have access to geolocation in the browser
+			if(navigator.geolocation) {
+				// set position is the callback that gets fired once a position is returned
+				navigator.geolocation.getCurrentPosition(setPosition)
+			} else {
+				alert ('geolocation is not supported by your browser')
+			}
+		}
+
+		// here position is passed from getCurrentPosition, we can call this wherever we want
+		function setPosition(position) {
+			console.log(position.coords.latitude)
+			console.log(position.coords.longitude)
+
+			var lat = position.coords.latitude
+			var lon = position.coords.longitude
+
+			// grab our location and pass it in as a variable and message the user
+			var loc = document.getElementById('location')
+
+			loc.innerHTML = 'Latitude: ' + lat + '<br/> Longitude: ' + lon
+		}
+
+
+	</script>
+</head>
+<body>
+	<div id="location"></div>
+</body>
+</html>

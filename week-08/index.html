@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Arrays</title>
+	<script type="text/javascript">
+		var months = [];
+		var months = [
+			"January", 
+			"February", 
+			"March", 
+			"April", 
+			"May", 
+			"June", 
+			"July", 
+			"August", 
+			"September", 
+			"October", 
+			"November", 
+			"December"
+		];
+
+		console.log(months);
+		console.log(months.length);
+
+		var lastMonth = months.pop();
+		console.log(lastMonth);
+		console.log('The month removed was ' + lastMonth + '. Our array is now: ' + months.length + '.');
+		months.push(lastMonth);
+		console.log(months);
+		months.push("Fakeuary");
+		console.log(months);
+		months.pop();
+		console.log(months);
+
+		console.log(months[5]);
+
+		for (var i = 0; i < months.length; i++) {
+			console.log(i, months[i])
+		}
+
+		// for (var i = months.length - 1; i >= 0; i--) {
+		// 	var dm = months.pop();
+		// 	console.log("deleted " + dm + " the new array length is " + months.length);
+		// }
+
+		function randomNumber(n) {
+			var rn = Math.round(n * Math.random());
+			return rn;
+		}
+
+		console.log(randomNumber(50))
+
+		console.log(months[randomNumber(months.length-1)]);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

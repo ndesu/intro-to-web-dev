@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>More Math Functions and Random</title>
+	<script type="text/javascript">
+		//floting point data types and more built in Math functions
+		var z = 2.25
+		var y = 2.65
+		// Math.floor(n) takes a number and rounds it down and returns an integer
+		console.log(Math.floor(z))
+		console.log(Math.floor(y))
+		// Math.ceil(n) takes a number and rounds it up and returns an integer
+		console.log(Math.ceil(z))
+		console.log(Math.ceil(y))
+		// Math.round(n) takes a number and rounds it to the nearest integer and returns
+		// Math.random returns a float between 0 and 1
+		var r = Math.random()
+		console.log(r)
+
+		//we can combine these to make a coin flip function
+		var yn = Math.round(Math.random());
+		console.log(yn)
+
+		// if(yn === 0) {
+		// 	alert("HEADS")
+		// } else {
+		// 	alert("TAILS")
+		// }
+
+		// What about a random number with a range from MIN to MAX
+		function randomNumberRange(min, max) {
+			var rn = Math.random() * (max - min) + min;
+			return rn;
+		}
+
+		var number = randomNumberRange(56, 789)
+		console.log(Math.round(number));
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

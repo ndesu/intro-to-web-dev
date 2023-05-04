@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HTML FORMS and INPUTS</title>
+</head>
+<body>
+	<!--  Form using basic input types -->
+	<a href="https://www.w3schools.com/html/html_forms.asp"
+	target="_blank"
+	>You can learn more about forms here</a>
+
+	<p>
+		The form <em>action</em> usually contains a file or link to process the 
+		<strong>form data</strong>
+		<form action="create-profile.js" name="user-create" target="_self" method="GET">
+			<fieldset>
+				<legend>Simple Text Input</legend>
+				<p>This is your most basic text input</p>
+				<label for="FirstName">First Name:</label>
+				<input type="text" name="FirstName">
+				<!-- We can also limit character length with another attribute -->
+				<label for="LastName">Last Name:</label>
+				<input type="text" name="LastName" maxlength="6" placeholder="Smith">
+			</fieldset>
+			<fieldset>
+				<legend>Text Area Example</legend>
+				<label for="WhyClass">Why did you take this class?</label>
+				<textarea cols="50" rows="10"></textarea>
+			</fieldset>
+			<fieldset>
+				<legend>Check Boxes</legend>
+				<p>Check boxes allow the user to select more than one option. Check boxes have the same NAME and different VALUES</p>
+				<label for="pet">What pets do you have?</label>
+				<input type="checkbox" name="pet" value="dog"> DOG
+				<input type="checkbox" name="pet" value="cat"> CAT
+				<input type="checkbox" name="pet" value="bird"> BIRD
+				<input type="checkbox" name="pet" value="chicken"> CHICKEN
+			</fieldset>
+			<fieldset>
+				<legend>Radio Buttons</legend>
+				<input type="radio" name="fav-pet" value="dog"> DOG
+				<input type="radio" name="fav-pet" value="cat"> CAT
+				<input type="radio" name="fav-pet" value="bird"> BIRD
+				<input type="radio" name="fav-pet" value="chicken"> CHICKEN
+			</fieldset>
+			<fieldset>
+				<legend>Select Option Dropdown</legend>
+				<label for="state">State</label>
+				<select name="state">
+					<option value="NY">New York</option>
+					<option value="NJ">New Jersey</option>
+					<option value="NM">New Mexico</option>
+				</select>
+			</fieldset>
+			<input type="button" value="Submit" name="submitProfile">
+			<input type="button" value="Submit Disabled" name="submitProfile" disabled>
+		</form>
+	</p>
+</body>
+</html>

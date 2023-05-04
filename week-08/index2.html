@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Event Delegation Teaser</title>
+	<style type="text/css">
+		img {
+			display: block;
+
+		}
+
+		.hidden {
+			display: none;
+		}
+
+		.active {
+			color: red;
+
+		}
+	</style>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function () {
+			console.log("locked and loaded")
+		})
+	</script>
+</head>
+<body>
+	<h1>This H1 is here to be moused over and we can see the event object</h1>
+	<button id="hide">HIDE</button>
+	<div>
+		<img src="https://placekitten.com/400/400" alt="Adorable Kitten" />
+
+	</div>
+</body>
+</html>

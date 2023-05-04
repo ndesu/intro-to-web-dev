@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Event Delegation</title>
+	<style type="text/css">
+		.active {
+			color: red;
+			font-size: 3rem;
+
+		}
+	</style>
+</head>
+<body>
+	<p id="toggleMe">Just a paragraph waiting for event delegation!</p>
+	<button id="alertBtn">Click to fire a function with add event listener</button>
+	<script type="text/javascript">
+		function alertMe() {
+			alert('just another annoying popup window')
+		}
+
+		// watch for the DOM to fully load before applying our event listeners
+		// this usually happens with an anonymous function
+
+		document.addEventListener('DOMContentLoaded', function () {
+			console.log("content is loaded, now we can do stuff");
+
+
+
+			document.getElementById('alertBtn').addEventListener('click', alertMe)
+
+			document.getElementById('toggleMe').addEventListener('click', function () {
+				console.log(event.target)
+				var element = event.target
+				element.classList.toggle('active')
+			})
+		})
+	</script>
+</body>
+</html>
